@@ -1,15 +1,23 @@
 #!/usr/bin/env node
-console.log('哈哈哈哈😄😄😄');
-console.log('让我来帮你做这些事情吧😄😄😄');
 
-   
-var inquirer = require('inquirer');
-var create = require('./create.js');
+const program = require('commander');  
+const inquirer = require('inquirer');
+const create = require('./create.js');
+const json = require('../package.json');
+
+console.log('😄😄😄');
+program
+    .version('V'+json.version)
+    .option('-c, create', '创建项目')
+    .parse(process.argv)
+
+if (program.create) main();
 /**
  * antor ：吴志祥
  * 主函数
  */
 function main(){
+    console.log('让我来帮你做这些事情吧😄😄😄');
     let questions = {
         type: 'input',
         name: 'componentsName',
@@ -50,4 +58,3 @@ function creatArr(path){
     ]}
     create(dirObj);
 }
-main();

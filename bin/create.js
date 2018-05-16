@@ -12,29 +12,29 @@ function mackfile(obj){
             fs.mkdirSync(process.cwd()+obj.dirPath);
             break;
         case 'app.vue':
-            copy(joinPath('../file/app.vue'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/app.vue'), process.cwd()+obj.dirPath);
             break;
         case 'main.js':
-            copy(joinPath('../file/main.js'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/main.js'), process.cwd()+obj.dirPath);
             break;
         case 'index.html':
-            copy(joinPath('../file/index.html'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/index.html'), process.cwd()+obj.dirPath);
             break;
         case 'webpack.config.js':
-            copy(joinPath('../file/webpack.config.js'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/webpack.config.js'), process.cwd()+obj.dirPath);
             break;
         case '.babelrc':
-            copy(joinPath('../file/.babelrc'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/.babelrc'), process.cwd()+obj.dirPath);
             break;
             
         case '.npmignore':
-            copy(joinPath('../file/.npmignore'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/.npmignore'), process.cwd()+obj.dirPath);
             break;
         case '.gitignore':
-            copy(joinPath('../file/.gitignore'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/.gitignore'), process.cwd()+obj.dirPath);
             break;
         case 'README.md':
-            copy(joinPath('../file/README.md'), process.cwd()+obj.dirPath);
+            copy(joinPath('../templates/README.md'), process.cwd()+obj.dirPath);
             break;
     }
     if(obj.child.length<=0){

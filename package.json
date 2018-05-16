@@ -26,9 +26,10 @@
   },
   "homepage": "https://github.com/moyuanshangshen/vue-cmp-cli#readme",
   "bin": {
-    "vcc start": "./bin/main.js"
+    "vcc": "./bin/main.js"
   },
   "dependencies": {
+    "commander": "^2.15.1",
     "inquirer": "^5.2.0"
   }
 }
